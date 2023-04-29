@@ -33,4 +33,6 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: ipa
-          path: ${PWD}/build/MyApp.xcarchive
+          path: | 
+            ${PWD}/build/*
+            /Users/runner/Library/Developer/Xcode/DerivedData/KeePassium-fsjzlehqwknhkqarbfoicdeudkfg/Build/Intermediates.noindex/ArchiveIntermediates/KeePassium/InstallationBuildProductsLocation/Applications/KeePassium.app
