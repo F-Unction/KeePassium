@@ -4,17 +4,8 @@
 <dict>
     <key>compileBitcode</key>
     <false/>
-    <key>destination</key>
-    <string>export</string>
     <key>method</key>
-    <string>package</string>
-    <key>provisioningProfiles</key>
-    <dict>
-        <key>com.keepassium.ios</key>
-        <string>KeePassium</string>
-    </dict>
-    <key>signingCertificate</key>
-    <string>iPhone Distribution</string>
+    <string>development</string>
     <key>signingStyle</key>
     <string>manual</string>
     <key>stripSwiftSymbols</key>
@@ -23,9 +14,5 @@
     <string></string>
     <key>thinning</key>
     <string>&lt;none&gt;</string>
-    <key>uploadBitcode</key>
-    <false/>
-    <key>uploadSymbols</key>
-    <true/>
 </dict>
 </plist>
