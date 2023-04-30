@@ -27,7 +27,7 @@ jobs:
           if [ $scheme = default ]; then scheme=$(cat default); fi
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-          xcodebuild -configuration Release -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=iOS Simulator,name=iPad Pro (11-inch) (2nd generation),OS=15.1" -archivePath "${PWD}/build/MyApp.xcarchive" archive
+          xcodebuild -configuration Release -"$filetype_parameter" "$file_to_build" -destination "platform=iOS Simulator,name=iPad Pro (11-inch) (2nd generation),OS=15.1" -archivePath "${PWD}/build/MyApp.xcarchive" archive
           ls -R .
           #xcodebuild -exportArchive -archivePath "${PWD}/build/MyApp.xcarchive" -exportOptionsPlist "./build.plist" -exportPath "${PWD}/build"
       - name: Upload a Build Artifact
